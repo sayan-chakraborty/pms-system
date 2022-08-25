@@ -9,14 +9,17 @@ import { StockService } from '../stock.service';
   styleUrls: ['./create-stock.component.css']
 })
 export class CreateStockComponent implements OnInit {
-
+  walletMoney = 1000;
   stock: Stock = new Stock();
   constructor(private stockService: StockService, private router: Router) { }
 
   ngOnInit(): void {
+    
   }
 
   saveStockSell() {
+    this.walletMoney = this.walletMoney + (this.stock.price*this.stock.volume);
+    console.log(this.walletMoney);
     this.stock.buyOrSell = "S";
     this.stock.statusCode = 0;
     this.stockService.createStock(this.stock).subscribe(data => {
@@ -27,11 +30,13 @@ export class CreateStockComponent implements OnInit {
   }
 
   saveStockBuy() {
+    this.walletMoney = this.walletMoney - (this.stock.price*this.stock.volume);
+    console.log(this.walletMoney);
     this.stock.buyOrSell = "B";
     this.stock.statusCode = 0;
     this.stockService.createStock(this.stock).subscribe(data => {
       console.log(data);
-      this.goToStockList();
+      // this.goToStockList();
     },
     error => console.log(error));
   }
