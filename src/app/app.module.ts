@@ -1,18 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CreateStockComponent } from './create-stock/create-stock.component';
+import { FormsModule} from '@angular/forms';
+import { StockListV2Component } from './stock-list-v2/stock-list-v2.component';
+import { ByStockNameComponent } from './by-stock-name/by-stock-name.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CreateStockComponent,
+    StockListV2Component,
+    ByStockNameComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ByStockNameComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

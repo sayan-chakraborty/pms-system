@@ -1,0 +1,23 @@
+<h4>Order History:</h4>
+<table class = "table table-hover">
+    <thead>
+        <tr>
+            <th> ID </th>
+            <th> Name </th>
+            <th> Price </th>
+            <th> Volume </th>
+            <th> Order Type </th>
+            <th> Order Status </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let stock of stocks" >
+            <td> {{stock.id}} </td>
+            <td> {{ stock.stockTicker }} </td>
+            <td> {{ stock.price }} </td>
+            <td> {{ stock.volume }} </td>
+            <td> {{ stock.buyOrSell }} </td>
+            <td> {{ stock.statusCode }} </td>
+        </tr>
+    </tbody>
+</table>
