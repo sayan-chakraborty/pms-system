@@ -32,6 +32,8 @@ export class ByStockNameComponent implements OnInit {
       this.stocks = data;
       console.log(data);
     });
+
+    return this.stocks;
   }
 
 }

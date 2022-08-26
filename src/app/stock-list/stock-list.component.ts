@@ -19,7 +19,7 @@ export class StockListComponent implements OnInit {
   ngOnInit(): void {
     this.getStocks();
   };
-  }
+  
   private getStocks() {
     this.stockService.getStocksList().subscribe(data => {
       this.stocks = data;

@@ -1,8 +1,9 @@
 export class Stock {
     id!: number;
     stockTicker!: string;
-    price!: number;
+    price!: DoubleRange;
     volume!: number;
     buyOrSell!: string;
     statusCode!: number;
+    totalInvestment!: any;
 }
