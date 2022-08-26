@@ -17,7 +17,15 @@
             <td> {{ stock.price }} </td>
             <td> {{ stock.volume }} </td>
             <td> {{ stock.buyOrSell }} </td>
-            <td> {{ stock.statusCode }} </td>
+            <td><div *ngIf="stock.statusCode== 0">
+                Initialized</div>
+                <div *ngIf="stock.statusCode== 1">
+                Processing</div>
+                <div *ngIf="stock.statusCode== 2">
+                Approved</div>
+                <div *ngIf="stock.statusCode== 3">
+                Rejected</div>
+            </td>
         </tr>
     </tbody>
 </table>
