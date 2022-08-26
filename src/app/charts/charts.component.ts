@@ -35,12 +35,13 @@ export class ChartsComponent implements OnInit {
           datasets: [{
               label: 'Stock Price for ' + this.result.ticker,
               data: this.stockPrice,
-              borderWidth: 3,
+              borderWidth: 5,
               fill: false,
               backgroundColor: 'rgba(93, 175, 89, 0.1)',
-              borderColor: '#3e95cd'
+              borderColor: '#8e5ea2'
           }]
       }
+      
       })
     })
   }
