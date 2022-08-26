@@ -30,8 +30,10 @@ export class ByStockNameComponent implements OnInit {
   listStocksByNames(stockTicker: any) {
     this.stockService.getStockByStockTicker(stockTicker).subscribe(data => {
       this.stocks = data;
-      console.log(data);
+      //console.log(data);
     });
-  }
 
+    return this.stocks;
+  }
+  
 }

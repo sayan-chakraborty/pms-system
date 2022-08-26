@@ -5,4 +5,5 @@ export class Stock {
     volume!: number;
     buyOrSell!: string;
     statusCode!: number;
+    totalInvestment!: any;
 }

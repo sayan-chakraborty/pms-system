@@ -22,6 +22,12 @@ export class StockService {
   }
 
   createStock(stock: Stock): Observable<Object>{
+    stock.stockTicker=stock.stockTicker.toUpperCase();
+    var price: number=+stock.price;
+    var volume: number=+stock.volume;
+    var investment=price * volume;
+    stock.totalInvestment=investment;
+    console.log(typeof(stock.totalInvestment)+stock.totalInvestment);
     return this.httpClient.post(`${this.postURL}`, stock);
   }
 
