@@ -1,0 +1,51 @@
+
+<div class="col-md-6 offset-md-3">
+    <br>
+    <div class = "border border-5 rounded border-dark" style="background-color: #D3D3D3;">
+    <div style="padding: 16px;">
+    <h3 style="text-align: center;"> Plot Stock Chart </h3>
+    <br>
+    <!-- <form (ngSubmit) = "onSubmit()"> -->
+        <form method="get">
+
+
+        <div class="form-group input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1" style="background-color: #383838; color: white;">Stock Name</span>
+              </div>
+            <input type="text" class ="form-control" id = "stockTicker"
+                [(ngModel)] = "stock.stockTicker" name = "stockTicker">
+        </div>
+    
+    
+        <div class="form-group input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1" style="background-color: #383838; color: white;">Time Period</span>
+              </div>
+            <input type="number" class ="form-control" id = "volume"
+                [(ngModel)] = "stock.volume" name = "volume">
+        </div>
+
+        <!-- <div class="form-group">
+            <label> Buy/Sell</label>
+            <input type="text" class ="form-control" id = "buyOrSell"
+                [(ngModel)] = "stock.buyOrSell" name = "buyOrSell">
+        </div> -->
+
+        <!-- <div class="form-group">
+            <label> Status Code</label>
+            <input type="number" class ="form-control" id = "statusCode"
+                [(ngModel)] = "stock.statusCode" name = "statusCode">
+        </div> -->
+        <br>
+        <div class="col2" style="text-align: center;">
+        <button class = "btn btn-success col-2 border border-dark rounded border-2" type ="submit" style='margin-right:16px; text-align: center;' (click)="sendData()">Submit</button>
+        </div>
+    </form>
+</div>
+</div>
+    </div>
+    <br>
+
+    
+

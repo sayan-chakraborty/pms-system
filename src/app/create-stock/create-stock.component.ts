@@ -20,7 +20,7 @@ export class CreateStockComponent implements OnInit {
   saveStockSell() {
     this.walletMoney = this.walletMoney + (this.stock.price*this.stock.volume);
     console.log(this.walletMoney);
-    this.stock.buyOrSell = "S";
+    this.stock.buyOrSell = "Sell";
     this.stock.statusCode = 0;
     this.stockService.createStock(this.stock).subscribe(data => {
       console.log(data);
@@ -32,7 +32,7 @@ export class CreateStockComponent implements OnInit {
   saveStockBuy() {
     this.walletMoney = this.walletMoney - (this.stock.price*this.stock.volume);
     console.log(this.walletMoney);
-    this.stock.buyOrSell = "B";
+    this.stock.buyOrSell = "Buy";
     this.stock.statusCode = 0;
     this.stockService.createStock(this.stock).subscribe(data => {
       console.log(data);
